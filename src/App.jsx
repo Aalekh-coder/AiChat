@@ -1,12 +1,12 @@
-import SideBar from "./components/SideBar"
-
-
+import {Outlet} from "react-router-dom"
+import Header from "./components/Header"
 
 const App = () => {
   return (
-   <>
-    <SideBar />
-   </>
+   <div className="">
+    <Header />
+    <Outlet />
+   </div>
   )
 }
 

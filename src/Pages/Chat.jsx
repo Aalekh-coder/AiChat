@@ -9,10 +9,9 @@ const Chat = () => {
 
 
     const relatedTag = [{ icon: <FaCodepen color="red" />, title: "Code With AI" }, { icon: <TbMath color="pink" />, title: "Solve Questions" }, { icon: <IoDocumentTextOutline color="green" />, title: "Create Doc" }]
-    // const relatedTag = [{ icon: <FaCodepen color="red" />, title: "Code With AI" }]
 
     return (
-        <div className=" p-3 h-[90vh] sm:px-5 md:px-[10vw] lg:px-[10vw] bg-zinc-800 text-white">
+        <div className=" p-3 h-[90vh] sm:px-5 md:px-[10vw] lg:px-[10vw] text-white">
             {/* for new chat  */}
             <div className="h-[74vh] flex flex-col gap-5">
                 <div className="">

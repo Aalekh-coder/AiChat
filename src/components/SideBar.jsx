@@ -5,6 +5,8 @@ import { AiFillQuestionCircle } from "react-icons/ai";
 import { IoMdSettings } from "react-icons/io";
 import { useState } from "react";
 import { BsChatLeftText } from "react-icons/bs";
+import { CgProfile } from "react-icons/cg";
+import { Link } from "react-router";
 
 const SideBar = () => {
   const [toggleSideBar, setToggleSideBar] = useState(true);
@@ -37,12 +39,16 @@ const SideBar = () => {
           <AlignLeft className="cursor-pointer" />
         </div>
         <div className="h-[65vh] flex flex-col items-center ">
-          <div className={`text-[#444444] flex  items-center mt-10 ${toggleSideBar?"mr-20":""}`}>
+          <Link to="newchat"
+            className={`text-[#444444] flex  items-center mt-10 ${
+              toggleSideBar ? "mr-20" : ""
+            }`}
+          >
             <IoAddCircleSharp className="text-gray-400" size={35} />
             <div className={toggleSideBar ? "block mx-2" : "hidden"}>
               New chat
             </div>
-          </div>
+          </Link>
           {toggleSideBar ? (
             <>
               <p className="mr-8 mt-5 lg:mr-24">Recent</p>
@@ -62,27 +68,29 @@ const SideBar = () => {
           ) : (
             ""
           )}
-
-        
         </div>
 
-        <div className={`h-[30vh] flex items-center flex-col gap-5 py-5 ${toggleSideBar?"lg:mr-20":""}`}>
+        <div
+          className={`h-[30vh] flex items-center flex-col gap-5 py-5 ${
+            toggleSideBar ? "lg:mr-20" : ""
+          }`}
+        >
           <div className="text-[#444444] flex">
             <AiFillQuestionCircle size={25} />
             <div className={toggleSideBar ? "block px-4 " : "hidden"}>Help</div>
           </div>
-          <div className="text-[#444444] flex">
-            <RxCounterClockwiseClock size={25} />
+          <Link to="profile" className="text-[#444444] flex">
+            <CgProfile size={25} />
             <div className={toggleSideBar ? "block px-3" : "hidden"}>
               Active
             </div>
-          </div>
-          <div className="text-[#444444] flex">
+          </Link>
+          <Link to="setting" className="text-[#444444] flex">
             <IoMdSettings size={25} />
             <div className={toggleSideBar ? "block px-2" : "hidden"}>
               Setting
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </>
