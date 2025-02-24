@@ -1,13 +1,8 @@
-import AdminUser from "./Pages/AdminUser"
-
-
+import Login from './Pages/Login'
 
 const App = () => {
   return (
-    <>
-     <div className="h-[10vh] bg-slate-900"></div>
-  <AdminUser/>
-    </>
+    <><Login/></>
   )
 }
 

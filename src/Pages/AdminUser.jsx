@@ -2,7 +2,7 @@ import { CircleUser } from "lucide-react";
 
 const AdminUser = () => {
     return (
-        <div>
+        <div className="md:px-[3rem] lg:px-[8rem]">
             <div className="h-[19vh] bg-slate-200 m-3 overflow-hidden rounded-lg flex flex-row">
                 <div className="w-28 h-30 flex items-center justify-center ">
                     <div className="w-20 h-20 border-[6px] border-gray-600 rounded-full flex items-center justify-center">
