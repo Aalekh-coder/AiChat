@@ -1,8 +1,12 @@
-import Login from './Pages/Login'
+import SideBar from "./components/SideBar"
+
+
 
 const App = () => {
   return (
-    <><Login/></>
+   <>
+    <SideBar />
+   </>
   )
 }
 

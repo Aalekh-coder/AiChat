@@ -1,47 +1,92 @@
-import { AlignLeft } from "lucide-react"
-import { useState } from "react";
-import { RxQuestionMarkCircled, RxCounterClockwiseClock } from "react-icons/rx";
+import { AlignLeft } from "lucide-react";
+import { IoAddCircleSharp } from "react-icons/io5";
+import { RxCounterClockwiseClock } from "react-icons/rx";
+import { AiFillQuestionCircle } from "react-icons/ai";
 import { IoMdSettings } from "react-icons/io";
-
+import { useState } from "react";
+import { BsChatLeftText } from "react-icons/bs";
 
 const SideBar = () => {
-const [toggleSideBar, setToggleSideBar] = useState(false);
+  const [toggleSideBar, setToggleSideBar] = useState(true);
 
-    return (
-        <div className="">
-            <div className="m-2 ml-5">
-                <AlignLeft className="" onClick={()=>setToggleSideBar(!toggleSideBar)}/>
-            </div>
+  const recentChat = [
+    "Chat 1",
+    "Chat 2",
+    "Chat 3",
+    "Chat 4",
+    "Chat 5",
+    "Chat 2",
+    "Chat 3",
+    "Chat 4",
+    "Chat 5",
+  ];
 
-            <div className={`bg-gray-800 text-white rounded-e-md w-[90vw] p-4 h-[92.9vh] z-70 ${toggleSideBar?"transition-transform -translate-x-[25rem] md:-translate-x-[20vw] lg:-translate-x-[5vw] duration-200":"transition-transform -translate-x-2 lg:-translate-x-[20vw] duration-250 ease-linear"} md:w-[30vw] lg:w-[25vw]`} >
- 
-                
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, doloribus? Adipisci possimus minima autem quam mollitia nulla eligendi delectus nobis temporibus fugit! Illum adipisci sunt veritatis iste, cupiditate tempora officiis inventore perferendis. Fugit, labore omnis molestiae velit deserunt ea nostrum obcaecati animi illum pariatur maxime tempore veniam, eaque temporibus enim necessitatibus omnis?
-                {/* <div>
-                    <button>New Chat</button>
-                </div>
-
-                <div>
-                    <p>Recent</p>
-                    <ul>
-                        <li></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <span>
-
-                    </span>
-
-                    
-                </div> */}
-
-            </div>
-            <div className="absolute top-10 text-red-700 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae a ab praesentium quae nesciunt architecto doloribus ducimus sit perspiciatis voluptates, est consequuntur fugiat! Placeat consequatur ducimus nihil suscipit sit laboriosam quo odit ea quia totam vitae voluptate, tempora perspiciatis veritatis, aperiam veniam quam eligendi blanditiis labore quis? Dolorum, numquam ullam!</div>
-                
-           
+  return (
+    <>
+      <div
+        className={`bg-gray-200 ${
+          toggleSideBar
+            ? "w-[20vw] shadow-lg transition-all duration-300 ease-in-out lg:w-[15vw]"
+            : "w-12 lg:w-16"
+        } h-[100vh]`}
+      >
+        <div
+          className="pt-5 pl-3 lg:pl-5"
+          onClick={() => setToggleSideBar(!toggleSideBar)}
+        >
+          <AlignLeft className="cursor-pointer" />
         </div>
-    )
-}
+        <div className="h-[65vh] flex flex-col items-center ">
+          <div className={`text-[#444444] flex  items-center mt-10 ${toggleSideBar?"mr-20":""}`}>
+            <IoAddCircleSharp className="text-gray-400" size={35} />
+            <div className={toggleSideBar ? "block mx-2" : "hidden"}>
+              New chat
+            </div>
+          </div>
+          {toggleSideBar ? (
+            <>
+              <p className="mr-8 mt-5 lg:mr-24">Recent</p>
+              <div className="lg:mr-16">_______________</div>
+              <div className="h-full w-full overflow-x-auto">
+                {recentChat.map((chat, index) => (
+                  <div
+                    key={index}
+                    className="text-[#444444] flex items-center mt-5 mx-5"
+                  >
+                    <BsChatLeftText className="text-gray-400" size={10} />
+                    <div className="block mx-2">{chat}</div>
+                  </div>
+                ))}
+              </div>
+            </>
+          ) : (
+            ""
+          )}
 
-export default SideBar
+        
+        </div>
+
+        <div className={`h-[30vh] flex items-center flex-col gap-5 py-5 ${toggleSideBar?"lg:mr-20":""}`}>
+          <div className="text-[#444444] flex">
+            <AiFillQuestionCircle size={25} />
+            <div className={toggleSideBar ? "block px-4 " : "hidden"}>Help</div>
+          </div>
+          <div className="text-[#444444] flex">
+            <RxCounterClockwiseClock size={25} />
+            <div className={toggleSideBar ? "block px-3" : "hidden"}>
+              Active
+            </div>
+          </div>
+          <div className="text-[#444444] flex">
+            <IoMdSettings size={25} />
+            <div className={toggleSideBar ? "block px-2" : "hidden"}>
+              Setting
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default SideBar;

@@ -5,14 +5,13 @@ const Header = () => {
  
 
     return (
-        <>
-            <div className="bg-gray-600 h-[10vh] flex items-center justify-between p-5 border-none">
-                <div></div>
-                <div><LogIn /></div>
-            </div>
-            <SideBar />
-
-        </>
+        <div className="flex">
+           <SideBar/>
+           <div>
+            <div className="h-[10vh] bg-black">heallo</div>
+            heall2
+           </div>
+        </div>
     )
 }
 

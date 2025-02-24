@@ -14,11 +14,11 @@ const Chat = () => {
     return (
         <div className=" p-3 h-[90vh] sm:px-5 md:px-[10vw] lg:px-[10vw] bg-zinc-800 text-white">
             {/* for new chat  */}
-            {/* <div className="h-[74vh] flex flex-col gap-5">
+            <div className="h-[74vh] flex flex-col gap-5">
                 <div className="">
-                <p className="text-2xl font-bold text-center sm:text-3xl md:text-4xl font mt-10">How can I assist you today?</p> */}
+                <p className="text-2xl font-bold text-center sm:text-3xl md:text-4xl font mt-10">How can I assist you today?</p>
             {/* tags  */}
-            {/* <div className="h-[40vh] flex flex-wrap gap-4 lg:px-10 mt-5">
+            <div className="h-[40vh] flex flex-wrap gap-4 lg:px-10 mt-5">
                     {relatedTag?.map((item, index) => (
                         <>
                             <div className="border h-12 gap-3 rounded-full flex items-center justify-evenly p-5 text-lg lg:flex-col lg:items-start lg:h-56 lg:w-56 lg:rounded-lg">
@@ -32,16 +32,16 @@ const Chat = () => {
                             </div>
                         </>
                     ))}
-                </div> */}
-            {/* </div>
-            </div> */}
+                </div>
+            </div>
+            </div>
 
             {/* old chat  */}
 
-            <div className="h-[74vh] flex flex-col gap-5 overflow-x-auto">
+            {/* <div className="h-[74vh] flex flex-col gap-5 overflow-x-auto">
                 <ChatBubble />
                 <AiChatBubble/>
-            </div>
+            </div> */}
             <ChatInput />
         </div>
     )
