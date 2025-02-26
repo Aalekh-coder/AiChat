@@ -1,9 +1,9 @@
-import Header from "./components/Header"
+import SideHeader from "./components/SideHeader"
 
 const App = () => {
   return (
    <>
-      <Header />
+      <SideHeader />
    </>
   )
 }
