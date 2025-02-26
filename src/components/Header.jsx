@@ -23,10 +23,7 @@ const Header = () => {
           <div className="">
             <Outlet />
             {toggleAuth? <Login/>:""}
-            {/* {toggleAuth ? <div className="bg-white rounded-lg shadow-2xl shadow-black absolute top-[5rem] left-[4rem]">
-              <Login/>
-              
-            </div> : ""} */}
+          
           </div>
         </div>
 
