@@ -7,14 +7,14 @@ const ChatInput = ({ input }) => {
   const [state, setState] = useState(input || "");
 
   return (
-    <div className="flex gap-0.5 items-center border border-gray-300 rounded-lg px-4 py-2 w-full bg-white shadow-md sm:gap-4">
+    <div className="flex gap-0.5 items-center border border-gray-300 rounded-lg px-4 py-2 w-full bg-white shadow-md sm:gap-4 lg:h-[10vh]">
       {/* Image Upload Icon */}
      
       {/* Input Field */}
       <input
         type="text"
         placeholder="Ask anythink"
-        className="flex-1  py-2 outline-none text-gray-700 bg-transparent"
+        className="flex-1 py-2 outline-none text-gray-700 bg-transparent placeholder:text-lg"
         value={state}
         onChange={(e)=>setState(e.target.value)}
           />

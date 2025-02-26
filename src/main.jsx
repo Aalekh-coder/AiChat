@@ -6,6 +6,7 @@ import { RouterProvider } from "react-router-dom";
 import Chat from "./Pages/Chat.jsx"
 import AdminUser from "./Pages/AdminUser.jsx"
 import NewChat from "./Pages/NewChat.jsx";
+import ChatList from "./Pages/ChatList.jsx";
 // import {
 //   createRoutesFromElements,
 //   RouterProvider,
@@ -16,9 +17,10 @@ import NewChat from "./Pages/NewChat.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
+      <Route path="/" element={<NewChat/>} />
+      <Route path="/chat" element={<ChatList/>} />
       <Route path="/setting" element={<div>Setting</div>} />
       <Route path="/profile" element={<AdminUser/>} />
-      <Route path="/newchat" element={<NewChat/>} />
 
       <Route path='*' element={<div>404 - Page Not found</div>} />
     </Route>

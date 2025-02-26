@@ -29,10 +29,10 @@ fetchData();
             <div className="px-2"></div> */}
 
             {/* text reply for code */}
-            {/* <div className="border-b-2">
+            <div className="border-b-2">
                 <p className="text-2xl capitalize mb-4 flex gap-3 items-center"> <GiChaingun className="animate-spin" /> Generating the code for your  <BsThreeDots className="animate-bounce" /></p>
                 <AiReplyForCode code={code} />
-            </div> */}
+            </div>
         
         {/* table reply  */}
 

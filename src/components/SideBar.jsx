@@ -1,6 +1,5 @@
 import { AlignLeft } from "lucide-react";
 import { IoAddCircleSharp } from "react-icons/io5";
-import { RxCounterClockwiseClock } from "react-icons/rx";
 import { AiFillQuestionCircle } from "react-icons/ai";
 import { IoMdSettings } from "react-icons/io";
 import { useState } from "react";
@@ -39,9 +38,9 @@ const SideBar = () => {
           <AlignLeft className="cursor-pointer" />
         </div>
         <div className="h-[65vh] flex flex-col items-center ">
-          <Link to="newchat"
+          <Link to="/"
             className={`text-[#444444] flex  items-center mt-10 ${
-              toggleSideBar ? "mr-20" : ""
+              toggleSideBar ? "mr-10" : ""
             }`}
           >
             <IoAddCircleSharp className="text-gray-400" size={35} />
@@ -55,13 +54,13 @@ const SideBar = () => {
               <div className="lg:mr-16">_______________</div>
               <div className="h-full w-full overflow-x-auto">
                 {recentChat.map((chat, index) => (
-                  <div
+                  <Link to="/chat"
                     key={index}
                     className="text-[#444444] flex items-center mt-5 mx-5"
                   >
                     <BsChatLeftText className="text-gray-400" size={10} />
                     <div className="block mx-2">{chat}</div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </>
@@ -72,7 +71,7 @@ const SideBar = () => {
 
         <div
           className={`h-[30vh] flex items-center flex-col gap-5 py-5 ${
-            toggleSideBar ? "lg:mr-20" : ""
+            toggleSideBar ? "lg:mr-10 lg:mt-10" : "lg:mt-10"
           }`}
         >
           <div className="text-[#444444] flex">

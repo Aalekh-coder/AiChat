@@ -2,7 +2,7 @@ import { FaGooglePlusG } from "react-icons/fa";
 
 const Login = () => {
   return (
-    <div className="w-[100vw] h-[100vh] flex items-center justify-center font-roboto lg:w-[50vw] lg:mx-auto">
+    <div className="absolute lg:top-0 lg:left-80 top-0 shadow-black drop-shadow-xl w-[100vw] h-[90vh] z-50 flex items-center justify-center font-roboto lg:w-[50vw] lg:mx-auto">
       <div className="bg-white hidden lg:block "><img className="h-[60vh]" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" alt="" /></div>
       <div
         className="bg-gray-100 w-[100vw] h-[60vh] md:w-[60vw]
